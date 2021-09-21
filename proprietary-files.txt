@@ -1088,9 +1088,9 @@ vendor/lib/libOmxWmaDec.so|7fe5458ba5e19cd4c8422e910acbe6a6f6574c94
 # NFC
 vendor/lib/libpn553_fw.so
 
-# Perf - from LA.UM.8.2.r1-06700-sdm660.0
-vendor/lib/libqti-perfd-client.so|93b4806dd64f7b9a832d2b1999f6fa6413c56a48
-vendor/lib64/libqti-perfd-client.so|7089fa216b06fc78127b51df6cade6518886a463
+# Perf - from Taimen RP1A.201005.004
+vendor/lib/libqti-perfd-client.so|08b0cd20dbc79645ee73ea4fdc5221d41d09588a
+vendor/lib64/libqti-perfd-client.so|cd3def30b6d444430ea8cea8956623d9d165eb7a
 
 # Peripheral manager - from Cat S62Pro sdm660_64-user 11 RKQ1.210406.002 1.015.00
 vendor/bin/pm-proxy|42383b9163716d8e6d81f0516e9cf09f22ea8b06
