@@ -1,6 +1,6 @@
 cc_library_shared {
     name: "libgralloc.qti",
-    vendor_available: true,
+    vendor: true,
     cflags: [
         "-Wno-sign-conversion",
         "-DLOG_TAG=\"qtigralloc\"",
