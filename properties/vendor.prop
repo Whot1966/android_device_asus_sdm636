@@ -114,6 +114,8 @@ ro.crypto.volume.metadata.method=dm-default-key
 ro.crypto.volume.options=::v2
 
 # Display
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=1
 ro.hardware.egl=adreno
