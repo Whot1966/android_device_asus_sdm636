@@ -51,6 +51,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             )
         );
         new SmartCharging(context).onBootCompleted();
+        new DefaultSystemSettings(context).onBootCompleted();
 
         // === DELAYED TASKS === //
 
