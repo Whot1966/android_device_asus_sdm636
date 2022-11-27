@@ -20,6 +20,8 @@ package org.lineageos.settings;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.UserHandle;
+import android.provider.Settings;
 
 import androidx.preference.PreferenceManager;
 
@@ -48,5 +50,19 @@ public class DefaultSystemSettings {
     }
 
     public void onBootCompleted() {
+        if (isFirstRun("enable-dt2w")) {
+            writeDt2wOption(true);
+        }
+    }
+
+    private void writeDt2wOption(final boolean enabled) {
+        final boolean isDt2wEnabled = Settings.Secure.getIntForUser(
+                mContext.getContentResolver(), Settings.Secure.DOUBLE_TAP_TO_WAKE, 0,
+                UserHandle.USER_CURRENT) != 0;
+        if (enabled != isDt2wEnabled) {
+            Settings.Secure.putIntForUser(mContext.getContentResolver(),
+                    Settings.Secure.DOUBLE_TAP_TO_WAKE, enabled ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+        }
     }
 }
