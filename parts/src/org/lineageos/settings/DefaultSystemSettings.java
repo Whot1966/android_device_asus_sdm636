@@ -53,6 +53,8 @@ public class DefaultSystemSettings {
         if (isFirstRun("enable-dt2w")) {
             writeDt2wOption(true);
         }
+
+        writeAnimationSettings();
     }
 
     private void writeDt2wOption(final boolean enabled) {
@@ -64,5 +66,12 @@ public class DefaultSystemSettings {
                     Settings.Secure.DOUBLE_TAP_TO_WAKE, enabled ? 1 : 0,
                     UserHandle.USER_CURRENT);
         }
+    }
+
+    private void writeAnimationSettings() {
+        Settings.Global.putString(mContext.getContentResolver(),
+                Settings.Global.WINDOW_ANIMATION_SCALE, "0.5");
+        Settings.Global.putString(mContext.getContentResolver(),
+                Settings.Global.TRANSITION_ANIMATION_SCALE, "0.5");
     }
 }
