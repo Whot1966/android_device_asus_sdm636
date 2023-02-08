@@ -322,7 +322,7 @@ LOCAL_C_INCLUDES := \
     $(PRIMARY_HAL_PATH) \
     $(PRIMARY_HAL_PATH)/audio_extn \
     $(PRIMARY_HAL_PATH)/$(AUDIO_PLATFORM) \
-    vendor/qcom/opensource/audio-kernel/include/uapi/ \
+    kernel/asus/sdm660/techpack/audio/include/uapi/ \
     $(call include-path-for, audio-effects)
 
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
@@ -388,7 +388,7 @@ LOCAL_C_INCLUDES := \
     $(PRIMARY_HAL_PATH) \
     $(PRIMARY_HAL_PATH)/audio_extn \
     $(PRIMARY_HAL_PATH)/$(AUDIO_PLATFORM) \
-    vendor/qcom/opensource/audio-kernel/include/uapi/ \
+    kernel/asus/sdm660/techpack/audio/include/uapi/ \
     $(call include-path-for, audio-effects)
 
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
@@ -1168,7 +1168,7 @@ LOCAL_SRC_FILES:= \
         power_policy_launcher.cpp
 
 LOCAL_C_INCLUDES:= \
-        vendor/qcom/opensource/audio-hal/primary-hal/hal \
+        $(call project-path-for,qcom-audio)/hal \
         system/media/audio/include
 
 LOCAL_SHARED_LIBRARIES:= \
