@@ -197,3 +197,5 @@ ro.zram.periodic_wb_delay_hours=24
 ro.config.low_ram = false
 ro.lmk.log_stats = true
 
+# Zygote
+zygote.critical_window.minute=10
