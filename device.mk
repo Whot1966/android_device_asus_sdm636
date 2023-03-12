@@ -537,6 +537,12 @@ PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-service \
     vr.sdm660
 
+# Whot1966 extra packages
+PRODUCT_PACKAGES += \
+    PrebuiltChromium 
+
+$(call inherit-product, vendor/Whot1966/KillGMSFont/KillGMSFont.mk)
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd@1.0.vendor \
