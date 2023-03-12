@@ -1,14 +1,14 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2020 The bootlegOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_X00TD.mk
+    $(LOCAL_DIR)/bootleg_X00TD.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_X00TD-eng \
-    lineage_X00TD-user \
-    lineage_X00TD-userdebug
+    bootleg_X00TD-eng \
+    bootleg_X00TD-user \
+    bootleg_X00TD-userdebug
 
