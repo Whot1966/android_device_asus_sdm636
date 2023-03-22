@@ -33,6 +33,7 @@ import /vendor/etc/init/android.hardware.sensors@1.0-service.rc
 import /vendor/etc/init/android.hardware.audio.service.rc
 import /vendor/etc/init/init.time_daemon.rc
 import /vendor/etc/init/hw/init.parts.rc
+import /vendor/etc/init/hw/init.killgmsfont.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
