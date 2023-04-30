@@ -8,3 +8,6 @@ persist.vendor.runin.fp                       u:object_r:vendor_fingerprint_prop
 
 # NFC
 ro.hq.support.nfc                             u:object_r:nfc_sensors_prop:s0
+
+# Dirac
+persist.audio.dirac.                    u:object_r:dirac_prop:s0
