@@ -11,3 +11,6 @@ ro.hq.support.nfc                             u:object_r:nfc_sensors_prop:s0
 
 # Perf
 vendor.target.init.complete     u:object_r:vendor_mpctl_prop:s0
+
+# Dirac
+persist.audio.dirac.                    u:object_r:dirac_prop:s0
