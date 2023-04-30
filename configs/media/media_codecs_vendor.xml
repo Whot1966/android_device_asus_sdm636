@@ -82,7 +82,7 @@ Only the three quirks included above are recognized at this point:
 -->
 
 <!--
-  Non secure decoder capabilities for sdm660
+  Non secure decoder capabilities for X00TD
    __________ _________________________________________
   | Codec    | W       H       fps     Mbps    MB/s    |
   |__________|_________________________________________|
@@ -98,7 +98,7 @@ Only the three quirks included above are recognized at this point:
   | div4/5/6 | 1920    1088    30       10     244800  |
   |__________|_________________________________________|
 
-  sdm660 secure decoder capabilities
+  X00TD secure decoder capabilities
    ______________________________________________________
  | Codec    | W       H       fps     Mbps    MB/s    |
  |__________|_________________________________________|
@@ -111,7 +111,7 @@ Only the three quirks included above are recognized at this point:
 -->
 
 <!--
-  Encoder capabilities for sdm660
+  Encoder capabilities for X00TD
    ____________________________________________________
   | Codec    | W       H       fps     Mbps    MB/s    |
   |__________|_________________________________________|

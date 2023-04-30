@@ -20,7 +20,7 @@ import os
 import sys
 from hashlib import sha1
 
-device = 'sdm660-common'
+device = 'X00TD'
 vendor = 'asus'
 
 with open('proprietary-files.txt', 'r') as f:
