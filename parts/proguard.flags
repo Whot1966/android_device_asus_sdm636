@@ -10,3 +10,6 @@
   *;
 }
 
+-keep class org.lineageos.settings.display.* {
+  *;
+}
