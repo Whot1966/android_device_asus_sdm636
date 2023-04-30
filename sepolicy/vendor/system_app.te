@@ -1,2 +1,11 @@
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
+
+# XiaomiParts
+allow system_app {
+    sysfs_shgain
+    sysfs_mgain
+    sysfs_battery_supply
+    sysfs_usb_supply
+}:file rw_file_perms;
+allow system_app { sysfs_usb_supply sysfs_battery_supply }:dir { search };
