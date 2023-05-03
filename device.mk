@@ -553,7 +553,6 @@ PRODUCT_PACKAGES += \
     libwifi-hal-qcom \
     wificond \
     libwpa_client \
-    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf \
     X00TDWifiOverlay
