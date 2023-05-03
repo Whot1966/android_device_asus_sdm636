@@ -28,90 +28,57 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <cstdlib>
 #include <fstream>
-#include <string.h>
-#include <sys/sysinfo.h>
-#include <unistd.h>
 #include <vector>
 
-#include <android-base/strings.h>
-#include <android-base/file.h>
+#include <android-base/logging.h>
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
-
-#include "vendor_init.h"
-#include "property_service.h"
+#include <sys/sysinfo.h>
 
 using android::base::GetProperty;
-using std::string;
 
-string heapstartsize, heapgrowthlimit, heapsize,
-       heapminfree, heapmaxfree, heaptargetutilization;
+void property_override(char const prop[], char const value[], bool add = true) {
+    prop_info* pi;
 
-std::vector<std::string> ro_props_default_source_order = {
-    "",
-    "odm.",
-    "product.",
-    "system.",
-    "system_ext."
-    "vendor.",
-    "vendor_dlkm.",
-};
-
-void property_override(char const prop[], char const value[], bool add = true)
-{
-    prop_info *pi;
-
-    pi = (prop_info *) __system_property_find(prop);
+    pi = (prop_info*)__system_property_find(prop);
     if (pi)
         __system_property_update(pi, value, strlen(value));
     else if (add)
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void set_ro_build_prop(const std::string &prop, const std::string &value) {
-    for (const auto &source : ro_props_default_source_order) {
-        auto prop_name = "ro." + source + "build." + prop;
-        if (source == "")
-            property_override(prop_name.c_str(), value.c_str());
-        else
-            property_override(prop_name.c_str(), value.c_str(), false);
-    }
-};
-
-void check_device()
-{
+void set_dalvik_vm_config() {
     struct sysinfo sys;
-
     sysinfo(&sys);
 
     if (sys.totalram > 5072ull * 1024 * 1024) {
         // from - phone-xhdpi-6144-dalvik-heap.mk
-        heapstartsize = "16m";
-        heapgrowthlimit = "256m";
-        heapsize = "512m";
-        heaptargetutilization = "0.5";
-        heapminfree = "8m";
-        heapmaxfree = "32m";
+        property_override("dalvik.vm.heapstartsize","16m");
+        property_override("dalvik.vm.heapgrowthlimit", "256m");
+        property_override("dalvik.vm.heapsize", "512m");
+        property_override("dalvik.vm.heaptargetutilization", "0.5");
+        property_override("dalvik.vm.heapminfree", "8m");
+        property_override("dalvik.vm.heapmaxfree", "32m");
     } else if (sys.totalram > 3072ull * 1024 * 1024) {
         // from - phone-xxhdpi-4096-dalvik-heap.mk
-        heapstartsize = "8m";
-        heapgrowthlimit = "256m";
-        heapsize = "512m";
-        heaptargetutilization = "0.6";
-        heapminfree = "8m";
-        heapmaxfree = "16m";
+        property_override("dalvik.vm.heapstartsize","8m");
+        property_override("dalvik.vm.heapgrowthlimit", "256m");
+        property_override("dalvik.vm.heapsize", "512m");
+        property_override("dalvik.vm.heaptargetutilization", "0.6");
+        property_override("dalvik.vm.heapminfree", "8m");
+        property_override("dalvik.vm.heapmaxfree", "16m");
     } else {
         // from - phone-xhdpi-2048-dalvik-heap.mk
-        heapstartsize = "8m";
-        heapgrowthlimit = "192m";
-        heapsize = "512m";
-        heaptargetutilization = "0.75";
-        heapminfree = "512k";
-        heapmaxfree = "8m";
+        property_override("dalvik.vm.heapstartsize","8m");
+        property_override("dalvik.vm.heapgrowthlimit", "192m");
+        property_override("dalvik.vm.heapsize", "512m");
+        property_override("dalvik.vm.heaptargetutilization", "0.75");
+        property_override("dalvik.vm.heapminfree", "512k");
+        property_override("dalvik.vm.heapmaxfree", "8m");
     }
+
 }
 
 void NFC_check()
@@ -128,24 +95,24 @@ void NFC_check()
         property_override("ro.hq.support.nfc", "0");
 }
 
-void vendor_load_properties()
- {
-    std::string fingerprint;
-    std::string description;
+void load_vendor_props() {
+    property_override("bluetooth.device.default_name", "Zenfone Max Pro M1");
+    property_override("ro.product.brand", "asus");
+    property_override("ro.product.manufacturer", "asus");
+    property_override("ro.product.device", "ASUS_X00TD");
+    property_override("ro.vendor.product.device", "ASUS_X00TD");
+    property_override("ro.product.name", "WW_X00TD");
+    property_override("ro.vendor.product.name", "WW_X00TD");
+    property_override("ro.build.fingerprint", "Android/sdm660_64/sdm660_64:9/PKQ1/16.2017.2009.087-20200826:user/release-keys");
+    property_override("ro.vendor.build.fingerprint", "Android/sdm660_64/sdm660_64:9/PKQ1/16.2017.2009.087-20200826:user/release-keys");
+    property_override("ro.build.description", "sdm660_64-user 9 PKQ1 43 release-keys");
+    property_override("vendor.usb.product_string", "Zenfone Max Pro M1");
+}
 
-    fingerprint = "google/redfin/redfin:13/TQ1A.230105.001/9292298:user/release-keys";
-    description = "sdm660_64-user 10 QKQ1 72 release-keys";
-
-    set_ro_build_prop("fingerprint", fingerprint);
-    property_override("ro.build.description", description.c_str());
-    
-    check_device();
+void vendor_load_properties() {
+    if (access("/system/bin/recovery", F_OK) != 0) {
+        load_vendor_props();
+    }
+    set_dalvik_vm_config();
     NFC_check();
-
-    property_override("dalvik.vm.heapstartsize", heapstartsize.c_str());
-    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit.c_str());
-    property_override("dalvik.vm.heapsize", heapsize.c_str());
-    property_override("dalvik.vm.heaptargetutilization", heaptargetutilization.c_str());
-    property_override("dalvik.vm.heapminfree", heapminfree.c_str());
-    property_override("dalvik.vm.heapmaxfree", heapmaxfree.c_str());
 }
