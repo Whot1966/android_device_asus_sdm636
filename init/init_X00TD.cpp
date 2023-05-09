@@ -63,12 +63,13 @@ void load_vendor_props() {
     property_override("bluetooth.device.default_name", "Zenfone Max Pro M1");
     property_override("ro.product.brand", "asus");
     property_override("ro.product.manufacturer", "asus");
-    property_override("ro.product.device", "ASUS_X00TD");
-    property_override("ro.vendor.product.device", "ASUS_X00TD");
+    property_override("ro.product.device", "ASUS_X00T_2");
+    property_override("ro.vendor.product.device", "ASUS_X00T_2");
     property_override("ro.product.name", "WW_X00TD");
     property_override("ro.vendor.product.name", "WW_X00TD");
-    property_override("ro.build.fingerprint", "Android/sdm660_64/sdm660_64:9/PKQ1/16.2017.2009.087-20200826:user/release-keys");
-    property_override("ro.vendor.build.fingerprint", "Android/sdm660_64/sdm660_64:9/PKQ1/16.2017.2009.087-20200826:user/release-keys");
+    property_override("ro.build.fingerprint", "asus/WW_X00TD/ASUS_X00T_2:9/PKQ1/16.2017.2009.087-20200826:user/release-keys");
+    property_override("ro.vendor.build.fingerprint", "asus/WW_X00TD/ASUS_X00T_2:9/PKQ1/16.2017.2009.087-20200826:user/release-keys");
+    property_override("ro.bootimage.build.fingerprint", "asus/WW_X00TD/ASUS_X00T_2:9/PKQ1/16.2017.2009.087-20200826:user/release-keys");
     property_override("ro.build.description", "sdm660_64-user 9 PKQ1 43 release-keys");
     property_override("vendor.usb.product_string", "Zenfone Max Pro M1");
 }
