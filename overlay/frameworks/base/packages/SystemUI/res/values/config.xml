@@ -48,6 +48,13 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
     <integer name="config_screenRecorderMaxFramerate">60</integer>
 
+    <!-- System icon area layout weight -->
+    <item name="system_icon_area_weight" format="float" type="integer">1.25</item>
+ 
+    <!-- Max visible notification icons -->
+    <integer name="config_maxVisibleNotificationIcons">6</integer>
+    <integer name="config_maxVisibleNotificationIconsWhenDark">7</integer>
+    
     <!-- Tiles to auto add to Quick Settings upon first change of a given secure setting.
          The syntax is setting-name:spec. If the tile is a TileService, the spec should be specified
          as custom(package/class). Relative class name is supported. -->
