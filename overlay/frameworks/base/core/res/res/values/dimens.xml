@@ -24,4 +24,6 @@
          calculate the status bar height. -->
     <dimen name="status_bar_height_default">@dimen/status_bar_height_portrait</dimen>
 
+    <!-- Height of area above QQS where battery/time go. -->
+    <dimen name="quick_qs_offset_height">35dp</dimen>
 </resources>
