@@ -38,7 +38,7 @@ public class SmartCharging {
     public static final String KEY_CHARGING_CURRENT_MAX = "current_max_pref";
     public static final String KEY_RESET_STATS = "reset_stats";
 
-    public static final String CHARGING_ENABLED_PATH = "/sys/class/power_supply/battery/charging_enabled";
+    public static final String CHARGING_ENABLED_PATH = "/sys/class/power_supply/battery/input_suspend";
     public static final String CHARGING_CURRENT_MAX_PATH = "/sys/class/power_supply/usb/current_max";
     public static final String CHARGER_PRESENT_PATH = "/sys/class/power_supply/usb/present";
     public static final String BATTERY_CAPACITY_PATH = "/sys/class/power_supply/battery/capacity";
@@ -81,11 +81,11 @@ public class SmartCharging {
     }
 
     public static void enableCharging() {
-        PartsUtils.writeValue(CHARGING_ENABLED_PATH, "1");
+        PartsUtils.writeValue(CHARGING_ENABLED_PATH, "0");
     }
 
     public static void disableCharging() {
-        PartsUtils.writeValue(CHARGING_ENABLED_PATH, "0");
+        PartsUtils.writeValue(CHARGING_ENABLED_PATH, "1");
     }
 
     public static void setCurrentMax(final String mA) {
@@ -104,7 +104,7 @@ public class SmartCharging {
 
     public static boolean isChargingEnabled() {
         String raw = PartsUtils.readLine(CHARGING_ENABLED_PATH);
-        return raw.equals("1");
+        return raw.equals("0");
     }
 
     public static boolean isPlugged() {
