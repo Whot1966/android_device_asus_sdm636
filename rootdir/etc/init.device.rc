@@ -56,7 +56,3 @@ on boot
     chown system system /sys/class/sensors/stk3x1x-light/sensors_name
 
     chown radio radio sys/module/stk3x1x/parameters/call_status_flag
-
-    # Tap to wake node
-    chown system system /proc/tpd_gesture
-    chmod 0660 /proc/tpd_gesture

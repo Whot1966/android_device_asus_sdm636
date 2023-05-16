@@ -140,7 +140,7 @@ TARGET_BOARD_PLATFORM := sdm660
 TARGET_USES_UM_4_19 := true
 
 # Power
-TARGET_TAP_TO_WAKE_NODE := "/proc/tpd_gesture"
+TARGET_TAP_TO_WAKE_NODE := "/sys/kernel/touchpanel/dclicknode"
 TARGET_USES_INTERACTION_BOOST := true
 
 # Properties
