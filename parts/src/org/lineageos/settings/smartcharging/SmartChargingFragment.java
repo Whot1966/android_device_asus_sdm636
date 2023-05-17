@@ -34,7 +34,7 @@ import com.android.settingslib.widget.MainSwitchPreference;
 import com.android.settingslib.widget.OnMainSwitchChangeListener;
 
 import org.lineageos.settings.R;
-import org.lineageos.settings.preferences.SeekBarPreference;
+import org.lineageos.settings.preferences.SecureSettingCustomSeekBarPreference;
 import org.lineageos.settings.PartsUtils;
 
 public class SmartChargingFragment extends PreferenceFragment implements
@@ -47,9 +47,9 @@ public class SmartChargingFragment extends PreferenceFragment implements
     private SharedPreferences mSharedPrefs;
 
     private MainSwitchPreference mSmartChargingSwitch;
-    private SeekBarPreference mSeekBarChargingLimitPreference;
-    private SeekBarPreference mSeekBarChargingResumePreference;
-    private SeekBarPreference mSeekBarChargingTempPreference;
+    private SecureSettingCustomSeekBarPreference mSeekBarChargingLimitPreference;
+    private SecureSettingCustomSeekBarPreference mSeekBarChargingResumePreference;
+    private SecureSettingCustomSeekBarPreference mSeekBarChargingTempPreference;
     private ListPreference mChargingCurrentMaxListPref;
     private TwoStatePreference mResetStatsPreference;
 
