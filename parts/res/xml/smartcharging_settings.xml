@@ -19,26 +19,23 @@
         android:key="smart_charging"
         android:title="@string/smart_charging_switch_title" />
 
-    <org.lineageos.settings.preferences.SeekBarPreference
+    <org.lineageos.settings.preferences.SecureSettingCustomSeekBarPreference
         android:key="seek_bar_limit"
         android:title="@string/smart_charging_level_title"
-        android:layout="@layout/preference_slider"
         app:units="%"
         android:layout_gravity="center_vertical"
         android:layout_width="match_parent"/>
 
-    <org.lineageos.settings.preferences.SeekBarPreference
+    <org.lineageos.settings.preferences.SecureSettingCustomSeekBarPreference
         android:key="seek_bar_resume"
         android:title="@string/smart_charging_resume_level_title"
-        android:layout="@layout/preference_slider"
         app:units="%"
         android:layout_gravity="center_vertical"
         android:layout_width="match_parent"/>
 
-    <org.lineageos.settings.preferences.SeekBarPreference
+    <org.lineageos.settings.preferences.SecureSettingCustomSeekBarPreference
         android:key="seek_bar_temp"
         android:title="@string/smart_charging_battery_temperature"
-        android:layout="@layout/preference_slider"
         app:units="°C"
         android:layout_gravity="center_vertical"
         android:layout_width="match_parent"/>
