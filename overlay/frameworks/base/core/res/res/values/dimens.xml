@@ -17,13 +17,6 @@
 */
 -->
 <resources>
-    <!-- Height of the status bar -->
-    <dimen name="status_bar_height_portrait">35dp</dimen>
-
-    <!-- The default height of the status bar used in {@link SystemBarUtils#getStatusBarHeight} to
-         calculate the status bar height. -->
-    <dimen name="status_bar_height_default">@dimen/status_bar_height_portrait</dimen>
-
     <!-- Height of area above QQS where battery/time go. -->
-    <dimen name="quick_qs_offset_height">35dp</dimen>
+    <dimen name="quick_qs_offset_height">28dp</dimen>
 </resources>
