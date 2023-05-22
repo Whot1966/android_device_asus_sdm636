@@ -1,13 +1,15 @@
 on boot
     # Smart Charging
-    chown system system /sys/class/power_supply/battery/charging_enabled
-    chmod 0666 /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
     chown system system /sys/class/power_supply/battery/capacity
     chmod 0666 /sys/class/power_supply/battery/capacity
     chown system system /sys/class/power_supply/battery/temp
     chmod 0666 /sys/class/power_supply/battery/temp
     chown system system /sys/class/power_supply/usb/current_max
     chmod 0666 /sys/class/power_supply/usb/current_max
+    chown system system /sys/class/power_supply/usb/present
+    chmod 0666 /sys/class/power_supply/usb/present
 
     # KCal
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_cont
@@ -24,6 +26,7 @@ on boot
     chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_val
     chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_min
     chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal
+
 on property:sys.boot_completed=1
     # Audio gain permissions
     chown system system /sys/kernel/sound_control/headphone_gain
