@@ -66,7 +66,7 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
             mShowSign = a.getBoolean(R.styleable.CustomSeekBarPreference_showSign, mShowSign);
             String units = a.getString(R.styleable.CustomSeekBarPreference_units);
             if (units != null)
-                mUnits = " " + units;
+                mUnits = units;
             mContinuousUpdates = a.getBoolean(R.styleable.CustomSeekBarPreference_continuousUpdates, mContinuousUpdates);
         } finally {
             a.recycle();
