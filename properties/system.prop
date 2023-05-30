@@ -39,6 +39,9 @@ persist.hwc.mdpcomp.enable=true
 ro.min.fling_velocity=160
 ro.max.fling_velocity=20000
 
+# Fuse
+persist.sys.fuse.passthrough.enable=true
+
 # FM
 vendor.hw.fm.init=0
 
