@@ -25,6 +25,8 @@ import android.provider.Settings;
 
 import androidx.preference.PreferenceManager;
 
+import com.android.settingslib.development.DevelopmentSettingsEnabler;
+
 public class DefaultSystemSettings {
     private static final String TAG = "DefaultSystemSettings";
     private static final boolean DEBUG = false;
@@ -69,9 +71,36 @@ public class DefaultSystemSettings {
     }
 
     private void writeAnimationSettings() {
-        Settings.Global.putString(mContext.getContentResolver(),
-                Settings.Global.WINDOW_ANIMATION_SCALE, "0.5");
-        Settings.Global.putString(mContext.getContentResolver(),
-                Settings.Global.TRANSITION_ANIMATION_SCALE, "0.5");
+        final String[] toggleAnimationTargets = {
+            Settings.Global.WINDOW_ANIMATION_SCALE,
+            Settings.Global.TRANSITION_ANIMATION_SCALE
+        };
+
+        final String animationOffValue = "0";
+
+        boolean allAnimationsDisabled = true;
+        for (String animationSetting : toggleAnimationTargets) {
+            final String currentAnimationValue = Settings.Global.getString(
+                    mContext.getContentResolver(), animationSetting);
+            if (!animationOffValue.equals(currentAnimationValue)) {
+                allAnimationsDisabled = false;
+                break;
+            }
+        }
+
+        boolean canSetAnimationValues = true;
+
+        // Respect "Accessibility -> Remove animations" option
+        canSetAnimationValues &= !allAnimationsDisabled;
+        // Respect "Developer options" preference
+        canSetAnimationValues &= !DevelopmentSettingsEnabler
+            .isDevelopmentSettingsEnabled(mContext);
+
+        if (canSetAnimationValues) {
+            for (String animationSetting : toggleAnimationTargets) {
+                Settings.Global.putString(mContext.getContentResolver(),
+                        animationSetting, "0.5");
+            }
+        }
     }
 }
