@@ -88,6 +88,7 @@ vendor.voice.path.for.pcm.voip=false
 # Bluetooth
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bluetooth.modem_nv_support=true
+bluetooth.hardware.power.operating_voltage_mv=3300
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aa
 vendor.qcom.bluetooth.soc=cherokee
@@ -106,12 +107,6 @@ persist.vendor.camera.dual.isp.sync=0
 # Codec2 switch
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
-
-# Crypto
-ro.crypto.dm_default_key.options_format.version=2
-ro.crypto.volume.filenames_mode=aes-256-cts
-ro.crypto.volume.metadata.method=dm-default-key
-ro.crypto.volume.options=::v2
 
 # Display
 debug.hwui.use_hint_manager=true
