@@ -81,6 +81,17 @@ void set_dalvik_vm_config() {
 
 }
 
+void set_avoid_gfxaccel_config() {
+    struct sysinfo sys;
+    sysinfo(&sys);
+
+    if (sys.totalram <= 3072ull * 1024 * 1024) {
+        // Reduce memory footprint
+        property_override("ro.config.avoid_gfx_accel", "true");
+    }
+}
+
+
 void NFC_check()
 {
     // Check NFC
@@ -116,6 +127,7 @@ void vendor_load_properties() {
     if (access("/system/bin/recovery", F_OK) != 0) {
         load_vendor_props();
     }
+    set_avoid_gfxaccel_config();
     set_dalvik_vm_config();
     NFC_check();
 }
