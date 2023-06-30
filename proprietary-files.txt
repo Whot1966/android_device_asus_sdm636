@@ -27,6 +27,13 @@ lib/soundfx/libdirac.so:vendor/lib/soundfx/libdirac.so|e92652ab578e90bb9e9b09553
 # Audio firmware
 vendor/firmware/tfa98xx.cnt
 
+# Bluetooth (A2DP) - from Cat S62Pro sdm660_64-user 11 RKQ1.210406.002 1.015.00
+vendor/lib/hw/audio.bluetooth_qti.default.so|0fc8e709075ba7e984a4d5a1e9f7143698a78f98
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|f5ea997b223943101bed84470f191b2e4ce8957c
+vendor/lib/btaudio_offload_if.so|752c3e774c1585f7842ecbd85180365d85fc789f
+vendor/lib/libbluetooth_audio_session_qti.so|9a86488113e10594e0a3d4a36b436c6b7fd59317
+vendor/lib/libbluetooth_audio_session_qti_2_1.so|d9f83086774e22c8a09b02fa87850fae7382fdf1
+
 # Camera
 vendor/lib/hw/camera.sdm660.so
 vendor/lib/dualcali_dump.bin
