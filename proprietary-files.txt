@@ -853,6 +853,9 @@ vendor/lib64/libsdedrm.so|f02d7bef5f9fa3f1265b5a8b3b8ab481a4cedee2
 vendor/lib64/libsecureui_svcsock.so|6af612f057f4f28720d6db9b300b58c883da6539
 vendor/lib64/libssd.so|774488b88c37053067b3cad551ac95360c03edd3
 
+# DRM
+vendor/lib64/liboemcrypto.so
+
 # DRM - Qualcomm Trusted Execution Enviornment - from Cat S62Pro sdm660_64-user 11 RKQ1.210406.002 1.015.00
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|a12cd8a3d326609ee0f0a0cdb5cfc69bd2085f1e
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
