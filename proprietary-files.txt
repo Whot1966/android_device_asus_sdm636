@@ -799,6 +799,9 @@ vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|d9f1aa7f93b928f42499d613d20ccbc60f279097
 vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
 
+# DRM
+vendor/lib64/liboemcrypto.so
+
 # DRM - from SLD_sprout 11-RKQ1.210607.001-00WW_3_490-release-keys
 vendor/bin/qseecomd|1aa84570b97468e3e6d0a1266396db7d087d8f87
 vendor/lib/libQSEEComAPI.so|b88a74220b7082c4e066ab98664e653b9f0e76ea
