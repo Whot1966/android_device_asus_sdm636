@@ -1,1 +1,2 @@
 allow hal_thermal_default self:capability sys_admin;
+allow hal_thermal_default self:netlink_kobject_uevent_socket read;
