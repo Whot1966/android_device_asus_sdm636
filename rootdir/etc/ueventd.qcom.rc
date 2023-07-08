@@ -407,6 +407,11 @@ subsystem mem_buf_vm
 /sys/class/leds/lcd-backlight             brightness      0644    system    system
 /sys/class/backlight/panel0-backlight     brightness      0644    system    system
 
+# LED class vibrator
+/sys/class/leds/vibrator activate     0660    system    system
+/sys/class/leds/vibrator duration     0660    system    system
+/sys/class/leds/vibrator state        0660    system    system
+
 # NPU device
 /dev/msm_npu             0644   system     system
 
