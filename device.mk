@@ -285,15 +285,11 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
-PRODUCT_ENFORCE_RRO_TARGETS := *
-
 PRODUCT_PACKAGES += \
     CarrierConfigX00TD \
     CellBroadcastReceiverX00TD \
     FrameworksX00TD \
+    LineageSDKX00TD \
     SystemUIX00TD \
     TelephonyX00TD
 
