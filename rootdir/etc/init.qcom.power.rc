@@ -28,6 +28,9 @@
 on init
     write /sys/devices/virtual/graphics/fb0/idle_time 100
 
+    # Disable powersaving
+    write /sys/module/lpm_levels/parameters/sleep_disabled 1
+
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
     write /sys/fs/cgroup/memory/bg/memory.swappiness 140
