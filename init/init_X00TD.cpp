@@ -72,8 +72,6 @@ void load_vendor_props() {
     property_override("ro.bootimage.build.fingerprint", "asus/WW_X00TD/ASUS_X00T_2:9/PKQ1/16.2017.2009.087-20200826:user/release-keys");
     property_override("ro.build.description", "sdm660_64-user 9 PKQ1 43 release-keys");
     property_override("vendor.usb.product_string", "Zenfone Max Pro M1");
-    property_override("ro.boot.verifiedbootstate", "green");
-    property_override("ro.boot.verifiedstate", "green");
 }
 
 void vendor_load_properties() {
