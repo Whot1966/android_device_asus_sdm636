@@ -44,8 +44,4 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <!-- Doze: pulse parameter - delay to wait for the screen to wake up after an intent -->
     <integer name="doze_pulse_delay_in_intent">0</integer>
-
-    <!-- Whether the combined qs shows in status bar when true, the combined qs will not be available
-         if set it to false  -->
-    <bool name="flag_combined_qs_headers">false</bool>
 </resources>
