@@ -1609,11 +1609,11 @@ vendor/bin/subsystem_ramdump
 vendor/lib/libsubsystem_control.so
 vendor/lib64/libsubsystem_control.so
 
-# Thermal - from S62Pro RKQ1.210406.002
+# Thermal
 vendor/bin/thermal-engine
-vendor/etc/init/init_thermal-engine.rc
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
+vendor/lib/libthermalclient.so
+vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalioctl.so
 
 # TUI - from S62Pro RKQ1.210406.002
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
