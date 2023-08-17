@@ -37,6 +37,9 @@ on init
 
     write /sys/devices/virtual/graphics/fb0/idle_time 100
 
+    # Disable powersaving
+    write /sys/module/lpm_levels/parameters/sleep_disabled 1
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
