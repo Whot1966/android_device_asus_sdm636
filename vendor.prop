@@ -137,7 +137,6 @@ dalvik.vm.heapmaxfree=8m
 # Display
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
-debug.sf.enable_hwc_vds=1
 debug.sf.enable_gl_backpressure=1
 debug.sf.hw=1
 debug.sf.recomputecrop=0
