@@ -1,4 +1,4 @@
-#! /vendor/bin/sh
+f#! /vendor/bin/sh
 
 # Copyright (c) 2012-2013, 2016-2020, The Linux Foundation. All rights reserved.
 #
@@ -2803,6 +2803,12 @@ case "$target" in
 
             # Start cdsprpcd only for sdm660 and disable for sdm630
             start vendor.cdsprpcd
+
+            # Disable cdsprpcd service for sdm636
+            case "$soc_id" in
+                "345" )
+                setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
+            esac
 
             # Start Host based Touch processing
                 case "$hw_platform" in
