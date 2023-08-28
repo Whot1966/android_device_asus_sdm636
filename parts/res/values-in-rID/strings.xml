@@ -19,35 +19,37 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Dirac settings -->
-    <string name="dirac_title">Peningkat kualitas suara</string>
-    <string name="dirac_summary">Mengoptimalkan kualitas audio. Ditenagai oleh Dirac</string>
-    <string name="dirac_headset_title">Pilih tipe headphone</string>
+    <string name="dirac_title">Peningkat suara</string>
+    <string name="dirac_summary">Mengoptimalkan kualitas audio</string>
+    <string name="dirac_headset_title">Pilih tipe headphones</string>
     <string name="dirac_preset_title">Pilih preset</string>
+
     <!-- Dirac settings: Headset types -->
-    <string name="dirac_headset_default">Bawaan</string>
-    <string name="dirac_headset_earbuds">Earbuds Dirac</string>
-    <string name="dirac_headset_in_ear_2013">In-ear Dirac 1</string>
-    <string name="dirac_headset_piston_1">Earphones Dirac 1</string>
+    <string name="dirac_headset_default">Default</string>
+    <string name="dirac_headset_earbuds">Earbuds OEM</string>
+    <string name="dirac_headset_in_ear_2013">In-ear OEM 1</string>
+    <string name="dirac_headset_piston_1">Earphones OEM 1</string>
     <string name="dirac_headset_general">Umum</string>
     <string name="dirac_headset_general_inear">In-ear umum</string>
-    <string name="dirac_headset_piston_basic">Earphones Dirac 2-1</string>
-    <string name="dirac_headset_piston_2">Earphones Dirac 2-2</string>
-    <string name="dirac_headset_piston_standard">Earphones Dirac 2-3</string>
-    <string name="dirac_headset_headphone">Headphones Dirac 1</string>
-    <string name="dirac_headset_piston_youth">Earphones Dirac 3-1</string>
-    <string name="dirac_headset_piston_color">Earphones Dirac 3-2</string>
-    <string name="dirac_headset_in_ear">In-ear Dirac 2</string>
-    <string name="dirac_headset_capsule">Capsule Dirac</string>
-    <string name="dirac_headset_in_ear_pro">In-ear pro Dirac</string>
-    <string name="dirac_headset_comfort">Headphones Dirac 2</string>
-    <string name="dirac_headset_reduction_noise">Peredam kebisingan Dirac Type-C</string>
-    <string name="dirac_headset_cancelling">Peredam kebisingan Dirac 3.5mm</string>
-    <string name="dirac_headset_half_in_ear">Half in-ear Dirac</string>
-    <string name="dirac_headset_in_ear2">In-ear Dirac 3</string>
-    <string name="dirac_headset_earphone_basic">Earphones bawaan Dirac-1</string>
-    <string name="dirac_headset_earphone">Earphones bawaan Dirac-2</string>
+    <string name="dirac_headset_piston_basic">Earphones OEM 2-1</string>
+    <string name="dirac_headset_piston_2">Earphones OEM 2-2</string>
+    <string name="dirac_headset_piston_standard">Earphones OEM 2-3</string>
+    <string name="dirac_headset_headphone">Headphones OEM 1</string>
+    <string name="dirac_headset_piston_youth">Earphones OEM 3-1</string>
+    <string name="dirac_headset_piston_color">Earphones OEM 3-2</string>
+    <string name="dirac_headset_in_ear">In-ear OEM 2</string>
+    <string name="dirac_headset_capsule">Capsule OEM</string>
+    <string name="dirac_headset_in_ear_pro">In-ear pro OEM</string>
+    <string name="dirac_headset_comfort">Headphones OEM 2</string>
+    <string name="dirac_headset_reduction_noise">Peredam kebisingan OEM Type-C</string>
+    <string name="dirac_headset_cancelling">Peredam kebisingan OEM 3.5mm</string>
+    <string name="dirac_headset_half_in_ear">Half in-ear OEM</string>
+    <string name="dirac_headset_in_ear2">In-ear OEM 3</string>
+    <string name="dirac_headset_earphone_basic">Earphones default OEM-1</string>
+    <string name="dirac_headset_earphone">Earphones default OEM-2</string>
+
     <!-- Dirac settings: Equalizer presets -->
-    <string name="dirac_preset_default">Bawaan</string>
+    <string name="dirac_preset_default">Default</string>
     <string name="dirac_preset_rock">Rock</string>
     <string name="dirac_preset_jazz">Jazz</string>
     <string name="dirac_preset_pop">Pop</string>
@@ -58,11 +60,50 @@
     <string name="dirac_preset_country">Country</string>
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
+
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Nilai: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">secara bawaan</string>
-    <string name="custom_seekbar_default_value_to_set">Nilai bawaan: <xliff:g id="v">%s</xliff:g>\nTekan lama untuk mengatur</string>
-    <string name="custom_seekbar_default_value_is_set">Nilai bawaan telah diatur</string>
+    <string name="custom_seekbar_default_value">secara default</string>
+    <string name="custom_seekbar_default_value_to_set">Nilai default: <xliff:g id="v">%s</xliff:g>\nTekan lama untuk menyetel</string>
+    <string name="custom_seekbar_default_value_is_set">Nilai default telah disetel</string>
+
+    <!-- KCAL -->
+    <string name="device_kcal_title">Kontrol Warna</string>
+    <string name="kcal_settings_title">Kontrol Warna</string>
+    <string name="kcal_settings_summary">Sesuaikan warna layar Anda</string>
+    <string name="advanced_settings_kcal">Kontrol Warna</string>
+    <string name="cat_colormanagement">Pengaturan warna</string>
+    <string name="cat_calibration">Pengaturan kalibrasi</string>
+
+    <string name="kcal_enabled">Gunakan Kontrol Warna</string>
+    <string name="kcal_disabled">Gunakan Kontrol Warna</string>
+    <string name="set_on_boot">Set ketika menyala</string>
+    <string name="color_red">Merah</string>
+    <string name="color_green">Hijau</string>
+    <string name="color_blue">Biru</string>
+    <string name="color_minimum">Minimum</string>
+    <string name="saturation">Saturasi</string>
+    <string name="value">Nilai</string>
+    <string name="contrast">Kontras</string>
+    <string name="hue">Corak</string>
+    <string name="grayscale">Layar abu-abu</string>
+
+    <string name="presets_dialog_title">Pilih preset</string>
+    <!-- Presets -->
+    <string name="preset_default">Default</string>
+    <string name="preset_version_1">Versi 1</string>
+    <string name="preset_version_2">Versi 2</string>
+    <string name="preset_version_3">Versi 3</string>
+    <string name="preset_triluminous">Triluminous</string>
+    <string name="preset_deep_black_white">Hitam putih dalam</string>
+    <string name="preset_deep_natural">Natural dalam</string>
+    <string name="preset_cool_amoled">Amoled sejuk</string>
+    <string name="preset_extreme_amoled">Amoled ekstrim</string>
+    <string name="preset_warm_amoled">Amoled ekstrim</string>
+    <string name="preset_hybrid_mamba">Mamba hibdrida</string>
+    <string name="kcal_presets">@string/presets_dialog_title</string>
+    <string name="kcal_reset">Reset</string>
+
     <!-- Smart charging -->
     <string name="smart_charging_title">Pengisian Pintar</string>
     <string name="smart_charging_summary">Tentukan batas maksimal pengisian</string>
@@ -71,13 +112,18 @@
     <string name="smart_charging_resume_level_title">Titik mulai picu</string>
     <string name="smart_charging_battery_temperature">Temperatur baterai</string>
     <string name="smart_charging_current_max">Intensitas arus</string>
-    <string name="smart_charging_current_max_entry_default">Bawaan</string>
+    <string name="smart_charging_current_max_entry_default">Default</string>
     <string name="smart_charging_warning">Batas maksimal picu harus diatas titik mulai</string>
-    <string name="smart_charging_reset_stats_title">Set ulang statistik baterai</string>
-    <string name="smart_charging_reset_stats_summary">Pulihkan statistik baterai saat mencapai batas pengisian</string>
-    <string name="smart_charging_footer">Pengisian Pintar mengizinkan anda untuk mengatur batas maksimal pengisian, guna memperpanjang usia baterai. Ketika dinyalakan, baterai akan berhenti diisi saat mencapai batas maksimal picu dan diisi pada titik mulai picu. Batas maksimal picu harus diatas titik mulai.</string>
+    <string name="smart_charging_reset_stats_title">Reset statistik baterai</string>
+    <string name="smart_charging_reset_stats_summary">Pulihkan statistik baterai jika mencapai batas pengisian</string>
+    <string name="smart_charging_footer">Pengisian Pintar mengizinkan Anda untuk mengatur batas maksimal pengisian, guna memperpanjang usia baterai. Saat diaktifkan, baterai akan berhenti diisi jika mencapai batas maksimal picu dan diisi kembali di titik mulai picu. Batas maksimal picu harus diatas titik mulai.</string>
 
     <!-- Misc -->
     <string name="not_now">"Nanti saja"</string>
 
+    <!-- Audio amplification -->
+    <string name="volume_gain_label">Pengeras suara</string>
+    <string name="volume_gain_summary">Kontrol penguatan audio</string>
+    <string name="volume_gain_title">Penguatan earpiece and headphones</string>
+    <string name="microphone_gain_title">Penguatan mikrofon</string>
 </resources>
