@@ -18,9 +18,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="device_settings_app_name">ZenParts</string> 
+
     <!-- Dirac settings -->
     <string name="dirac_title">Peningkat suara</string>
     <string name="dirac_summary">Mengoptimalkan kualitas audio</string>
+    <string name="dirac_enable">Gunakan peningkat suara</string>
     <string name="dirac_headset_title">Pilih tipe headphones</string>
     <string name="dirac_preset_title">Pilih preset</string>
 
@@ -119,7 +122,8 @@
     <string name="smart_charging_footer">Pengisian Pintar mengizinkan Anda untuk mengatur batas maksimal pengisian, guna memperpanjang usia baterai. Saat diaktifkan, baterai akan berhenti diisi jika mencapai batas maksimal picu dan diisi kembali di titik mulai picu. Batas maksimal picu harus diatas titik mulai.</string>
 
     <!-- Misc -->
-    <string name="not_now">"Nanti saja"</string>
+    <string name="not_now">Nanti saja</string>
+    <string name="next_update_time">Pembaruan selanjutnya pada %1$s</string>  
 
     <!-- Audio amplification -->
     <string name="volume_gain_label">Pengeras suara</string>
