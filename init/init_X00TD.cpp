@@ -38,15 +38,16 @@
 #include <sys/sysinfo.h>
 
 using android::base::GetProperty;
+using std::string;
 
-void property_override(char const prop[], char const value[], bool add = true) {
-    prop_info* pi;
+void property_override(string prop, string value)
+{
+    auto pi = (prop_info*) __system_property_find(prop.c_str());
 
-    pi = (prop_info*)__system_property_find(prop);
-    if (pi)
-        __system_property_update(pi, value, strlen(value));
-    else if (add)
-        __system_property_add(prop, strlen(prop), value, strlen(value));
+    if (pi != nullptr)
+        __system_property_update(pi, value.c_str(), value.size());
+    else
+        __system_property_add(prop.c_str(), prop.size(), value.c_str(), value.size());
 }
 
 void set_dalvik_vm_config() {
@@ -107,16 +108,26 @@ void NFC_check()
 }
 
 void load_vendor_props() {
+
+    string device, fingerprint, name;
+
+    device = "ASUS_X00T_2";
+    fingerprint = "Android/sdm660_64/sdm660_64:9/PKQ1/16.2017.2009.087-20200826:user/release-keys";
+    name = "WW_X00TD";
+
+    string prop_partitions[] = { "", "odm.", "system.",
+					"system_ext.", "vendor." };
+
+    for (const string &prop : prop_partitions) {
+        property_override(string("ro.product.") + prop + string("name"), name);
+        property_override(string("ro.product.") + prop + string("device"), device);
+        property_override(string("ro.") + prop + string("build.fingerprint"), fingerprint);
+    }
+
     property_override("bluetooth.device.default_name", "Zenfone Max Pro M1");
     property_override("ro.product.brand", "asus");
     property_override("ro.product.manufacturer", "asus");
-    property_override("ro.product.device", "ASUS_X00T_2");
-    property_override("ro.vendor.product.device", "ASUS_X00T_2");
-    property_override("ro.product.name", "WW_X00TD");
-    property_override("ro.vendor.product.name", "WW_X00TD");
-    property_override("ro.build.fingerprint", "asus/WW_X00TD/ASUS_X00T_2:9/PKQ1/16.2017.2009.087-20200826:user/release-keys");
-    property_override("ro.vendor.build.fingerprint", "asus/WW_X00TD/ASUS_X00T_2:9/PKQ1/16.2017.2009.087-20200826:user/release-keys");
-    property_override("ro.bootimage.build.fingerprint", "asus/WW_X00TD/ASUS_X00T_2:9/PKQ1/16.2017.2009.087-20200826:user/release-keys");
+    property_override("ro.bootimage.build.fingerprint", fingerprint);
     property_override("ro.build.description", "sdm660_64-user 9 PKQ1 43 release-keys");
     property_override("vendor.usb.product_string", "Zenfone Max Pro M1");
 }
