@@ -66,7 +66,7 @@
 
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Nilai: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">secara default</string>
+    <string name="custom_seekbar_default_value">Default</string>
     <string name="custom_seekbar_default_value_to_set">Nilai default: <xliff:g id="v">%s</xliff:g>\nTekan lama untuk menyetel</string>
     <string name="custom_seekbar_default_value_is_set">Nilai default telah disetel</string>
 
@@ -128,6 +128,6 @@
     <!-- Audio amplification -->
     <string name="volume_gain_label">Pengeras suara</string>
     <string name="volume_gain_summary">Kontrol penguatan audio</string>
-    <string name="volume_gain_title">Penguatan earpiece and headphones</string>
+    <string name="volume_gain_title">Penguatan earpiece dan headphones</string>
     <string name="microphone_gain_title">Penguatan mikrofon</string>
 </resources>
