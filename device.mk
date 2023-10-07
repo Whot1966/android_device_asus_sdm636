@@ -291,6 +291,7 @@ PRODUCT_PACKAGES += \
     DialerX00TD \
     FrameworksX00TD \
     LineageSDKX00TD \
+    SettingsProviderX00TD \
     SystemUIX00TD \
     TelephonyX00TD \
     TetheringX00TD \
