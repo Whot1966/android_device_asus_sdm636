@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2020 The LineageOS Project
 #
@@ -291,6 +292,7 @@ PRODUCT_PACKAGES += \
     DialerOverlayX00TD \
     FrameworksOverlayX00TD \
     LineageSDKOverlayX00TD \
+    SettingsProviderOverlayX00TD \
     SystemUIOverlayX00TD \
     TelephonyOverlayX00TD \
     TetheringOverlayX00TD \
