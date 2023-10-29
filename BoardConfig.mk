@@ -150,7 +150,6 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 # Platform
 TARGET_BOARD_PLATFORM := sdm660
 TARGET_USES_UM_4_19 := true
-TARGET_ENFORCES_QSSI := true
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/sys/kernel/touchpanel/dclicknode"
