@@ -292,7 +292,9 @@ PRODUCT_PACKAGES += \
     FrameworksOverlayX00TD \
     LineageSDKOverlayX00TD \
     SystemUIOverlayX00TD \
-    TelephonyOverlayX00TD
+    TelephonyOverlayX00TD \
+    TetheringOverlayX00TD \
+    WifiOverlayX00TD
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -486,8 +488,6 @@ PRODUCT_PACKAGES += \
     hostapd \
     libwifi-hal-qcom \
     libwpa_client \
-    TetheringConfigOverlay \
-    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 

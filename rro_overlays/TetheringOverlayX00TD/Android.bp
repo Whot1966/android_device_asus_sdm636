@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "TetheringOverlayX00TD",
+    theme: "TetheringOverlayX00TD",
+    sdk_version: "current",
+    vendor: true,
+}

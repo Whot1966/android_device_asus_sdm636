@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "WifiOverlayX00TD",
+    theme: "WifiOverlayX00TD",
+    sdk_version: "current",
+    vendor: true,
+}
