@@ -288,6 +288,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CarrierConfigX00TD \
     CellBroadcastReceiverX00TD \
+    DialerX00TD \
     FrameworksX00TD \
     LineageSDKX00TD \
     SystemUIX00TD \
