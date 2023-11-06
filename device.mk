@@ -286,10 +286,16 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlayX00TD \
+    CellBroadcastReceiverOverlayX00TD \
+    FrameworksOverlayX00TD \
+    SystemUIOverlayX00TD \
+    TelephonyOverlayX00TD
 
 # Permissions
 PRODUCT_COPY_FILES += \

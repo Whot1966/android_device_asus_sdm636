@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "CarrierConfigOverlayX00TD",
+    theme: "CarrierConfigOverlayX00TD",
+    sdk_version: "current",
+    vendor: true,
+}

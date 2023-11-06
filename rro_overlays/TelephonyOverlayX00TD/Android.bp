@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "TelephonyOverlayX00TD",
+    theme: "TelephonyOverlayX00TD",
+    sdk_version: "current",
+    vendor: true,
+}
