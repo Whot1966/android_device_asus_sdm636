@@ -1,6 +1,0 @@
-runtime_resource_overlay {
-    name: "LineageSDKOverlayX00TD",
-    theme: "LineageSDKOverlayX00TD",
-    sdk_version: "current",
-    vendor: true,
-}

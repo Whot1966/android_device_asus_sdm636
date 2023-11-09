@@ -223,10 +223,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
 
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
@@ -289,9 +285,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayX00TD \
     CellBroadcastReceiverOverlayX00TD \
-    DialerOverlayX00TD \
     FrameworksOverlayX00TD \
-    LineageSDKOverlayX00TD \
     SettingsProviderOverlayX00TD \
     SystemUIOverlayX00TD \
     TelephonyOverlayX00TD \

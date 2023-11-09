@@ -92,9 +92,6 @@ TARGET_KERNEL_SOURCE := kernel/asus/sdm660
 TARGET_KERNEL_CONFIG := vendor/X00TD_defconfig vendor/debugfs.config
 TARGET_KERNEL_VERSION := 4.19
 
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
-
 # LMKD
 TARGET_LMKD_STATS_LOG := true
 

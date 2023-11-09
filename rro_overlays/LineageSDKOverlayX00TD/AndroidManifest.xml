@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="lineageos.platform.overlay.X00TD">
-    <overlay
-        android:isStatic="true"
-        android:priority="550"
-        android:targetPackage="lineageos.platform" />
-</manifest>
