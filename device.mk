@@ -287,6 +287,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayX00TD \
     CellBroadcastReceiverOverlayX00TD \
+    DialerOverlayX00TD \
     FrameworksOverlayX00TD \
     SettingsProviderOverlayX00TD \
     SystemUIOverlayX00TD \
