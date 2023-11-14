@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.wifi.resources.overlay.X00TD">
     <overlay
-        android:isStatic="true"
-        android:priority="550"
-        android:targetPackage="com.android.wifi.resources" />
+      android:targetPackage="com.android.wifi.resources"
+      android:targetName="WifiCustomization"
+      android:isStatic="true"
+      android:priority="0"/>
 </manifest>
