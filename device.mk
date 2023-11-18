@@ -382,7 +382,7 @@ PRODUCT_COPY_FILES += \
 
 # QNS
 PRODUCT_PACKAGES += \
-    libstdc++.vendor
+    libstdc++_vendor
 
 # Radio
 PRODUCT_PACKAGES += \
